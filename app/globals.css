@@ -135,7 +135,7 @@
 }
 
 .input-group-name {
-  @apply bg-white rounded-2xl px-5 py-3 outline-none;
+  @apply bg-white rounded-2xl px-5 py-3 outline-none ;
 }
 
 .selected-contact {

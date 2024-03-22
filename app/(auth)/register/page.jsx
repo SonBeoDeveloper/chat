@@ -1,13 +1,7 @@
-import Form from '@/components/form'
-import React from 'react'
+import Form from "@components/Form";
 
 const Register = () => {
-    return (
-        <div className=''>
-            <Form type={'register'} />
+  return <Form type="register" />;
+};
 
-        </div>
-    )
-}
-
-export default Register
+export default Register;
