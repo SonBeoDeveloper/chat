@@ -33,7 +33,7 @@ const ChatList = ({ currentChatId }) => {
     if (currentUser) {
       getChats();
     }
-  }, [currentUser, search]);
+  }, [currentUser]);
 
   useEffect(() => {
     if (currentUser) {
@@ -64,7 +64,7 @@ const ChatList = ({ currentChatId }) => {
         pusherClient.unbind("new-chat", handleNewChat);
       };
     }
-  }, [currentUser]);
+  }, [currentUser, newChat]);
 
   return loading ? (
     <Loader />
@@ -80,6 +80,7 @@ const ChatList = ({ currentChatId }) => {
       <div className="chats">
         {chats?.map((chat, index) => (
           <ChatBox
+            key={currentChatId}
             chat={chat}
             index={index}
             currentUser={currentUser}

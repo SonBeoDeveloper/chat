@@ -15,7 +15,7 @@ const ChatPage = () => {
 
   const seenMessages = async () => {
     try {
-      await fetch (`/api/chats/${chatId}`, {
+      await fetch(`/api/chats/${chatId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -35,8 +35,8 @@ const ChatPage = () => {
 
   return (
     <div className="main-container">
-      <div className="w-1/3 max-lg:hidden"><ChatList currentChatId={chatId}/></div>
-      <div className="w-2/3 max-lg:w-full"><ChatDetails chatId={chatId}/></div>
+      <div className="w-1/3 max-lg:hidden"><ChatList currentChatId={chatId} /></div>
+      <div className="w-2/3 max-lg:w-full"><ChatDetails chatId={chatId} /></div>
     </div>
   )
 }

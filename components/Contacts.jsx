@@ -30,7 +30,7 @@ const Contacts = () => {
 
   useEffect(() => {
     if (currentUser) getContacts();
-  }, [currentUser, search]);
+  }, [currentUser]);
 
   /* SELECT CONTACT */
   const [selectedContacts, setSelectedContacts] = useState([]);
