@@ -64,7 +64,7 @@ const ChatList = ({ currentChatId }) => {
         pusherClient.unbind("new-chat", handleNewChat);
       };
     }
-  }, [currentUser, newChat]);
+  }, [currentUser]);
 
   return loading ? (
     <Loader />
