@@ -121,12 +121,11 @@ const ChatDetails = ({ chatId }) => {
           {chat?.isGroup ? (
             <>
               <Link href={`/chats/${chatId}/group-info`}>
-                <image
+                <img
                   src={chat?.groupPhoto || "/assets/group.png"}
                   alt="group-photo"
                   className="profilePhoto"
-                  width={40}
-                  height={40}
+
                 />
               </Link>
 
@@ -139,12 +138,11 @@ const ChatDetails = ({ chatId }) => {
             </>
           ) : (
             <>
-              <image
+              <img
                 src={otherMembers[0].profileImage || "/assets/person.jpg"}
                 alt="profile photo"
                 className="profilePhoto"
-                width={40}
-                height={40}
+
               />
               <div className="text">
                 <p>{otherMembers[0].username}</p>
@@ -192,8 +190,7 @@ const ChatDetails = ({ chatId }) => {
           </div>
 
           <div onClick={sendText}>
-            <image src="/assets/send.jpg" alt="send" className="send-icon" width={40}
-              height={40} />
+            <img src="/assets/send.jpg" alt="send" className="send-icon" />
           </div>
         </div>
       </div>

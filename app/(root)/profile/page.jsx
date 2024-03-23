@@ -82,7 +82,7 @@ const Profile = () => {
         )}
 
         <div className="flex items-center justify-between">
-          <image
+          <img
             src={
               watch("profileImage") ||
               user?.profileImage ||
@@ -90,6 +90,7 @@ const Profile = () => {
             }
             alt="profile"
             className="w-40 h-40 rounded-full"
+
           />
           <CldUploadButton
             options={{ maxFiles: 1 }}

@@ -15,7 +15,6 @@ const Form = ({ type }) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -61,9 +60,7 @@ const Form = ({ type }) => {
   return (
     <div className="auth">
       <div className="content">
-        <image src="/assets/logo.png" alt="logo" className="w-20 h-20" width={20}
-          height={20} />
-
+        <img src="/assets/logo.png" alt="logo" className="w-20 h-20" />
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
           {type === "register" && (
             <div>

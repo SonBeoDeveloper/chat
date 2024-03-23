@@ -19,8 +19,7 @@ const TopBar = () => {
   return (
     <div className="topbar">
       <Link href="/chats">
-        <image src="/assets/logo.png" alt="logo" className="w-16 h-16" width={16}
-          height={16} />
+        <img src="/assets/logo.png" alt="logo" className="w-16 h-16" />
       </Link>
 
       <div className="menu">
@@ -45,12 +44,10 @@ const TopBar = () => {
         />
 
         <Link href="/profile">
-          <image
+          <img
             src={user?.profileImage || "/assets/person.jpg"}
             alt="profile"
             className="profilePhoto"
-            width={40}
-            height={40}
           />
         </Link>
       </div>

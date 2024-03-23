@@ -22,20 +22,18 @@ const ChatBox = ({ chat, currentUser, currentChatId }) => {
     >
       <div className="chat-info">
         {chat?.isGroup ? (
-          <image
+          <img
             src={chat?.groupPhoto || "/assets/group.png"}
             alt="group-photo"
             className="profilePhoto"
-            width={40}
-            height={40}
+
           />
         ) : (
-          <image
+          <img
             src={otherMembers[0].profileImage || "/assets/person.jpg"}
             alt="profile-photo"
             className="profilePhoto"
-            width={40}
-            height={40}
+
           />
         )}
 

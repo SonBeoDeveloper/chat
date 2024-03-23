@@ -38,12 +38,11 @@ const BottomBar = () => {
       />
 
       <Link href="/profile">
-        <image
+        <img
           src={user?.profileImage || "/assets/person.jpg"}
           alt="profile"
           className="profilePhoto"
-          width={40}
-          height={40}
+
         />
       </Link>
     </div>
