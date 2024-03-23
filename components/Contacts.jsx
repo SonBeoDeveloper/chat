@@ -1,11 +1,9 @@
-"use client";
-
+"use client"
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import Loader from "./Loader";
 import { CheckCircle, RadioButtonUnchecked } from "@mui/icons-material";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
 const Contacts = () => {
   const [loading, setLoading] = useState(true);
@@ -99,10 +97,12 @@ const Contacts = () => {
                 ) : (
                   <RadioButtonUnchecked />
                 )}
-                <Image
+                <image
                   src={user.profileImage || "/assets/person.jpg"}
                   alt="profile"
                   className="profilePhoto"
+                  width={40}
+                  height={40}
                 />
                 <p className="text-base-bold">{user.username}</p>
               </div>

@@ -10,7 +10,6 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { signIn } from "next-auth/react"
-import Image from "next/image";
 
 const Form = ({ type }) => {
   const {
@@ -62,7 +61,8 @@ const Form = ({ type }) => {
   return (
     <div className="auth">
       <div className="content">
-        <Image src="/assets/logo.png" alt="logo" className="w-20 h-20" />
+        <image src="/assets/logo.png" alt="logo" className="w-20 h-20" width={20}
+          height={20} />
 
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
           {type === "register" && (

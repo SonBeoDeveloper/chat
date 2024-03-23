@@ -2,7 +2,6 @@
 
 import { Logout } from "@mui/icons-material";
 import { signOut, useSession } from "next-auth/react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -39,10 +38,12 @@ const BottomBar = () => {
       />
 
       <Link href="/profile">
-        <Image
+        <image
           src={user?.profileImage || "/assets/person.jpg"}
           alt="profile"
           className="profilePhoto"
+          width={40}
+          height={40}
         />
       </Link>
     </div>
