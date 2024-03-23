@@ -7,7 +7,7 @@ import Provider from "@components/Provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Auth Halo Chat",
+  title: "Chat",
   description: "Build a Next 14 Chat App",
 };
 

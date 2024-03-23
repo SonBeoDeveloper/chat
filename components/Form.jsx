@@ -56,12 +56,12 @@ const Form = ({ type }) => {
     }
   };
 
-  
+
 
   return (
     <div className="auth">
       <div className="content">
-        <img src="/assets/logo.png" alt="logo" className="logo" />
+        <img src="/assets/logo.png" alt="logo" className="w-20 h-20" />
 
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
           {type === "register" && (
@@ -132,7 +132,7 @@ const Form = ({ type }) => {
           </div>
 
           <button className="button" type="submit">
-            {type === "register" ? "Join Free" : "Let's Chat"}
+            {type === "register" ? "Join" : "Let's Chat"}
           </button>
         </form>
 
