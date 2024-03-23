@@ -2,6 +2,7 @@
 
 import { Logout } from "@mui/icons-material";
 import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,17 +20,15 @@ const BottomBar = () => {
     <div className="bottom-bar">
       <Link
         href="/chats"
-        className={`${
-          pathname === "/chats" ? "text-red-1" : ""
-        } text-heading4-bold`}
+        className={`${pathname === "/chats" ? "text-red-1" : ""
+          } text-heading4-bold`}
       >
         Chats
       </Link>
       <Link
         href="/contacts"
-        className={`${
-          pathname === "/contacts" ? "text-red-1" : ""
-        } text-heading4-bold`}
+        className={`${pathname === "/contacts" ? "text-red-1" : ""
+          } text-heading4-bold`}
       >
         Contacts
       </Link>
@@ -40,7 +39,7 @@ const BottomBar = () => {
       />
 
       <Link href="/profile">
-        <img
+        <Image
           src={user?.profileImage || "/assets/person.jpg"}
           alt="profile"
           className="profilePhoto"

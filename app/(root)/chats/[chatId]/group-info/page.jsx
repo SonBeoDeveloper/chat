@@ -3,6 +3,7 @@
 import Loader from "@components/Loader";
 import { GroupOutlined, PersonOutline } from "@mui/icons-material";
 import { CldUploadButton } from "next-cloudinary";
+import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -92,7 +93,7 @@ const GroupInfo = () => {
         {error?.name && <p className="text-red-500">{error.name.message}</p>}
 
         <div className="flex items-center justify-between">
-          <img
+          <Image
             src={watch("groupPhoto") || "/assets/group.png"}
             alt="profile"
             className="w-40 h-40 rounded-full"

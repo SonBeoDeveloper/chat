@@ -1,4 +1,5 @@
 import { format } from "date-fns";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const ChatBox = ({ chat, currentUser, currentChatId }) => {
@@ -22,13 +23,13 @@ const ChatBox = ({ chat, currentUser, currentChatId }) => {
     >
       <div className="chat-info">
         {chat?.isGroup ? (
-          <img
+          <Image
             src={chat?.groupPhoto || "/assets/group.png"}
             alt="group-photo"
             className="profilePhoto"
           />
         ) : (
-          <img
+          <Image
             src={otherMembers[0].profileImage || "/assets/person.jpg"}
             alt="profile-photo"
             className="profilePhoto"
@@ -49,18 +50,16 @@ const ChatBox = ({ chat, currentUser, currentChatId }) => {
               <p className="text-small-medium text-grey-3">You sent a photo</p>
             ) : (
               <p
-                className={`${
-                  seen ? "text-small-medium text-grey-3" : "text-small-bold"
-                }`}
+                className={`${seen ? "text-small-medium text-grey-3" : "text-small-bold"
+                  }`}
               >
                 Received a photo
               </p>
             )
           ) : (
             <p
-              className={`last-message ${
-                seen ? "text-small-medium text-grey-3" : "text-small-bold"
-              }`}
+              className={`last-message ${seen ? "text-small-medium text-grey-3" : "text-small-bold"
+                }`}
             >
               {lastMessage?.text}
             </p>

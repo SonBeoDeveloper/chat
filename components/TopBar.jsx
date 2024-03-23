@@ -2,6 +2,7 @@
 
 import { Logout } from "@mui/icons-material";
 import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -19,7 +20,7 @@ const TopBar = () => {
   return (
     <div className="topbar">
       <Link href="/chats">
-        <img src="/assets/logo.png" alt="logo" className="w-16 h-16" />
+        <Image src="/assets/logo.png" alt="logo" className="w-16 h-16" />
       </Link>
 
       <div className="menu">
@@ -44,7 +45,7 @@ const TopBar = () => {
         />
 
         <Link href="/profile">
-          <img
+          <Image
             src={user?.profileImage || "/assets/person.jpg"}
             alt="profile"
             className="profilePhoto"

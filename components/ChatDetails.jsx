@@ -8,6 +8,7 @@ import Link from "next/link";
 import { CldUploadButton } from "next-cloudinary";
 import MessageBox from "./MessageBox";
 import { pusherClient } from "@lib/pusher";
+import Image from "next/image";
 
 const ChatDetails = ({ chatId }) => {
   const [loading, setLoading] = useState(true);
@@ -121,7 +122,7 @@ const ChatDetails = ({ chatId }) => {
           {chat?.isGroup ? (
             <>
               <Link href={`/chats/${chatId}/group-info`}>
-                <img
+                <Image
                   src={chat?.groupPhoto || "/assets/group.png"}
                   alt="group-photo"
                   className="profilePhoto"
@@ -137,7 +138,7 @@ const ChatDetails = ({ chatId }) => {
             </>
           ) : (
             <>
-              <img
+              <Image
                 src={otherMembers[0].profileImage || "/assets/person.jpg"}
                 alt="profile photo"
                 className="profilePhoto"
@@ -188,7 +189,7 @@ const ChatDetails = ({ chatId }) => {
           </div>
 
           <div onClick={sendText}>
-            <img src="/assets/send.jpg" alt="send" className="send-icon" />
+            <Image src="/assets/send.jpg" alt="send" className="send-icon" />
           </div>
         </div>
       </div>
